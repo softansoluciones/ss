@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Usuarios</title>
+    <meta charset="UTF-8">
+    <script src="js/Contact/contact.js" type="text/javascript"></script>
+    <script src="js/Contact/contactBD.js" type="text/javascript"></script>
+</head>
+
+<body class=" container-fluid">
+    <script>
+        Load_Contact()
+    </script>
+    <center>
+        <h3>
+            <br>
+            Mensajes Recibidos
+        </h3>
+        <hr>
+    </center>
+    <div class="table-responsive" style="height: 84vh;">
+        <table class="table table-bordered" id="tab_Registros">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">E-Mail</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">
+                        <center>-</center>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tabB_Registros">
+            </tbody>
+        </table>
+    </div>
+
+    <!---------------------------Edit Modal----------------------------->
+    <div class="modal" tabindex="-1" role="dialog" id="modalEdit">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Reponder Mensaje</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <center>
+                        <div class="alert alert-danger backText" role="alert" id="modal_Alert">
+                        </div>
+                    </center>
+                    <form class="container">
+                        <div class="form-group">
+                            <input type="text" class="form-control textbox backText" id="modalEdit_id" name="modalEditContact"
+                                data-campo="Id de usuario" onchange="removec(this)" placeholder="Id de usuario">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control textbox" id="modalEdit_name" name="modalEditContact"
+                                data-campo="Nombres de usuario" onchange="removec(this)"
+                                placeholder="Nombres de usuario" disabled>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control textbox" id="modalEdit_lastName" name="modalEditContact"
+                                data-campo="Apellidos de usuario" onchange="removec(this)"
+                                placeholder="Apellidos de usuario" disabled>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control textbox" id="modalEdit_email" name="modalEditContact"
+                                data-campo="E-Mail" onchange="removec(this)" placeholder="E-Mail" disabled>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control textbox disabled" id="modalEdit_state"
+                                name="modalEditContact" data-campo="Estado" onchange="removec(this)"
+                                placeholder="Estado" disabled>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="10" cols="50" class="form-control textbox" id="modalEdit_message"
+                                name="modalEditContact" data-campo="Mensaje" onchange="removec(this)"
+                                placeholder="Mensaje" disabled></textarea>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="modalEdit_check" onclick="inapropiateMessage(this)">
+                            <label class="form-check-label" for="modalEdit_check">
+                                Marcar como inapropiado
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="10" cols="50" class="form-control textbox" id="modalEdit_response"
+                                name="modalEditContact" data-campo="Respuesta" onchange="removec(this)"
+                                placeholder="Respuesta"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cerrar</a>
+                    <a href="javascript: validateSave();" type="button" class="btn btn-ss-normal btn-sm"
+                        id="SaveEdit">Guardar</a>
+                    <a href="#" type="button" class="btn btn-ss-normal btn-sm disabled backText" id="SavingEdit"><span
+                            class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Guardando</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

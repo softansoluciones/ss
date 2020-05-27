@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Contenido</title>
+    <meta charset="UTF-8">
+    <script src="js/Contents/contentsBD.js" type="text/javascript"></script>
+    <script src="js/Commons/commons.js" type="text/javascript"></script>
+    <script src="js/Projects/projectsBD.js" type="text/javascript"></script>
+    <script src="js/Projects/projects.js" type="text/javascript"></script>
+</head>
+
+<body class=" container-fluid">
+    <script>
+        Load_Projects();
+        get_CategoriesSel("modalEdit_category");
+        get_EnviromentsSel("modalEdit_enviroment");
+        get_SectionsSel("modalEdit_section");
+        get_StatesSel("modalEdit_state", 1);
+        get_TypesSel("modalEdit_type");
+    </script>
+    <br>
+    <canter>
+        <h3>Proyectos</h3>
+        </center>
+        <hr>
+        <div class="container-fluid" style="height: 84vh; overflow-y: auto;">
+            <div class="card-columns" id="content_books">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="..." class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <center>
+                            <a href="#" class="btn btn-ss-normal btn-sm">Editar</a>
+                            <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------------------------Edit Modal----------------------------->
+        <div class="modal" tabindex="-1" role="dialog" id="modalEdit">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Editar Campaña</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <center>
+                            <div class="alert alert-danger backText" role="alert" id="modal_Alert">
+                            </div>
+                        </center>
+                        <form>
+                            <div class="form-group" id="modalEdit_image" style="width: 100%; height: auto;">
+
+                            </div>
+                            <div class="form-group backText">
+                                <label for="modalEdit_id">Id</label>
+                                <input type="text" class="form-control textbox" id="modalEdit_id" name="modalEditContents"
+                                    data-campo="Id de contenido" onchange="removec(this)" placeholder="Id de contenido">
+                            </div>
+                            <div class="form-group">
+                                <label for="modalEdit_title">Nombre de proyecto</label>
+                                <input type="text" class="form-control textbox" id="modalEdit_title" name="modalEditContents"
+                                    data-campo="Titulo de contenido" onchange="removec(this)">
+                            </div>
+                            <div class="form-group">
+                                <label for="modalEdit_text">Fecha de proyecto</label>
+                                <textarea class="form-control textbox" id="modalEdit_text" name="modalEditContents"
+                                    data-campo="Texto de contenido" onchange="removec(this)"rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="modalEdit_aditionalinfo">Url de proyecto</label>
+                                <textarea class="form-control textbox" id="modalEdit_aditionalinfo" name="modalEditContents"
+                                    data-campo="Información adicional de contenido" onchange="removec(this)"
+                                    placeholder="Información adicional de contenido" rows="3"></textarea>
+                            </div>
+                            <div class="form-group backText">
+                                <label for="">Contenido Extra</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="modalEdit_extrainfo"
+                                        name="modalEditContents_" data-campo="Contenido extra" onchange="removec(this)"
+                                        placeholder="Contenido extra">
+                                    <label class="custom-file-label" for="modalEdit_extrainfo">Seleccionar
+                                        Archivo</label>
+                                </div>
+                                <input type="text backText" class="form-control textbox " id="modalEdit_sextrainfo"
+                                    name="modalEditContents" data-campo="pdf" onchange="removec(this)"
+                                    placeholder="pdf" value="N/A">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Imagen</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="modalEdit_path"
+                                        name="modalEditContentsNA" data-campo="Imagen" onchange="removec(this)"
+                                        placeholder="Imagen">
+                                    <label class="custom-file-label" for="modalEdit_path">Seleccionar Archivo</label>
+                                </div>
+                                <input type="text" class="form-control textbox backText" id="modalEdit_spath"
+                                    name="modalEditContents" data-campo="Imagen" onchange="removec(this)"
+                                    placeholder="Imagen">
+                            </div>
+                            <div class="form-group">
+                                <label for="modalEdit_hierarchy">Posición</label>
+                                <input type="number" class="form-control textbox" id="modalEdit_hierarchy"
+                                    name="modalEditContents" data-campo="Posición" onchange="removec(this)"
+                                    placeholder="Posición">
+                            </div>
+                            <div class="form-group backText">
+                                <select class="form-control textbox" id="modalEdit_type" name="modalEditContents"
+                                    data-campo="Tipo de contenido" onchange="removec(this)">
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control textbox" id="modalEdit_section" name="modalEditContents"
+                                    data-campo="Sección" onchange="removec(this)">
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control textbox" id="modalEdit_enviroment" name="modalEditContents"
+                                    data-campo="Ambiente" onchange="removec(this)">
+                                </select>
+                            </div>
+                            <div class="form-group backText">
+                                <select class="form-control textbox" id="modalEdit_category" name="modalEditContents"
+                                    data-campo="Categoría" onchange="removec(this)">
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control textbox" id="modalEdit_state" name="modalEditContents"
+                                    data-campo="Estado" onchange="removec(this)">
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cerrar</a>
+                        <a href="javascript: validateSave();" type="button" class="btn btn-ss-normal btn-sm"
+                            id="SaveEdit">Guardar</a>
+                        <a href="#" type="button" class="btn btn-ss-normal btn-sm disabled backText"
+                            id="SavingEdit"><span class="spinner-border spinner-border-sm" role="status"
+                                aria-hidden="true"></span>
+                            Guardando</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Cms</title>
+    <meta charset="UTF-8">
+    <script src="js/Contents/contents.js" type="text/javascript"></script>
+    <script src="js/Contents/contentsForm.js" type="text/javascript"></script>
+    <script src="js/Contents/contentsBD.js" type="text/javascript"></script>
+    <script src="js/Commons/commons.js" type="text/javascript"></script>
+</head>
+
+<body class=" container-fluid">
+    <script>
+        get_TypesSel("type_sel");
+        get_CategoriesSel("modalEdit_category");
+        get_EnviromentsSel("modalEdit_enviroment");
+        get_SectionsSel("modalEdit_section");
+        get_StatesSel("modalEdit_state", 1);
+        get_TypesSel("modalEdit_type");
+    </script>
+    <center>
+        <h3>
+            <br>
+            Registro De Contenido
+        </h3>
+        <br>
+        <div class="form-group col-6">
+            <select class="form-control" id="type_sel" name="" data-campo="Tipo de contenido"
+                onchange="removec(this), validateForm(this)">
+            </select>
+        </div>
+        <hr>
+    </center>
+    <div class="backText" id="modalEdit_image-form" style="height: 70vh; overflow-y: auto;">
+        <div class="modal-body">
+            <center>
+                <div class="alert alert-danger backText" role="alert" id="modal_Alert">
+                </div>
+            </center>
+            <form>
+                <div class="form-group" id="modalEdit_image" style="width: 100%; height: auto;">
+
+                </div>
+                <div class="form-group" id="modalEdit_title-group">
+                    <label for="modalEdit_title">Titulo de contenido</label>
+                    <input type="text" class="form-control textbox" id="modalEdit_title" name="modalSaveContents"
+                        data-campo="Titulo de contenido" onchange="removec(this)">
+                </div>
+                <div class="form-group" id="modalEdit_text-group">
+                    <label for="modalEdit_text">Texto de contenido</label>
+                    <textarea class="form-control textbox" id="modalEdit_text" name="modalSaveContents"
+                        data-campo="Texto de contenido" onchange="removec(this)" rows="3"></textarea>
+                </div>
+                <div class="form-group" id="modalEdit_aditionalinfo-group">
+                    <label id="modalEdit_aditionalinfo-label" for="modalEdit_aditionalinfo">Información adicional de
+                        contenido</label>
+                    <textarea class="form-control textbox" id="modalEdit_aditionalinfo" name="modalSaveContents"
+                        data-campo="Información adicional de contenido" onchange="removec(this)" rows="3"></textarea>
+                </div>
+                <div class="form-group" id="modalEdit_extrainfo-group">
+                    <label for="modalEdit_extrainfo" id="modalEdit_extrainfo-label">Contenido extra</label>
+                    <input type="text" class="form-control textbox" id="modalEdit_extrainfo" name="modalSaveContents"
+                        data-campo="Contenido extra" onchange="removec(this)">
+                    <input type="text" class="form-control textbox backText" id="modalEdit_sextrainfo" name="modalEditContents"
+                        data-campo="pdf" onchange="removec(this)">
+                </div>
+                <div class="form-group" id="modalEdit_path-group">
+                    <label for="modalEdit_path">Imagen</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input textbox" id="modalEdit_path" lang="es"
+                            name="modalSaveContentsNA" data-campo="Imagen" onchange="removec(this)">
+                        <label class="custom-file-label" for="modalEdit_path">Seleccionar Archivo</label>
+                    </div>
+                    <input type="text" class="form-control textbox" id="modalEdit_spath" name="modalSaveContents"
+                        data-campo="Imagen" onchange="removec(this)">
+                </div>
+                <div class="form-group" id="modalEdit_hierarchy-group">
+                    <label for="modalEdit_hierarchy">Posición</label>
+                    <input type="number" class="form-control textbox" id="modalEdit_hierarchy" name="modalSaveContents"
+                        data-campo="Posición" onchange="removec(this)">
+                </div>
+                <div class="form-group" id="modalEdit_type-group">
+                    <select class="form-control textbox" id="modalEdit_type" name="modalSaveContents"
+                        data-campo="Tipo de contenido" onchange="removec(this)">
+                    </select>
+                </div>
+                <div class="form-group" id="modalEdit_section-group">
+                    <select class="form-control textbox" id="modalEdit_section" name="modalSaveContents" data-campo="Sección"
+                        onchange="removec(this)">
+                    </select>
+                </div>
+                <div class="form-group" id="modalEdit_enviroment-group">
+                    <select class="form-control textbox" id="modalEdit_enviroment" name="modalSaveContents"
+                        data-campo="Ambiente" onchange="removec(this)">
+                    </select>
+                </div>
+                <div class="form-group" id="modalEdit_category-group">
+                    <select class="form-control textbox" id="modalEdit_category" name="modalSaveContents" data-campo="Categoría"
+                        onchange="removec(this)">
+                    </select>
+                </div>
+                <div class="form-group" id="modalEdit_state-group">
+                    <select class="form-control textbox" id="modalEdit_state" name="modalSaveContents" data-campo="Estado"
+                        onchange="removec(this)">
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript: validateSave();" type="button" class="btn btn-ss-normal btn-sm"
+                id="SaveEdit">Guardar</a>
+            <a href="#" type="button" class="btn btn-ss-normal btn-sm disabled backText" id="SavingEdit"><span
+                    class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Guardando</a>
+        </div>
+    </div>
+</body>
+
+</html>

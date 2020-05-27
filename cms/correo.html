@@ -1,0 +1,89 @@
+<html>
+            <head>
+            <meta charset='UTF-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1'>
+            <style>
+            table {
+            font-family: Arial;
+            font-size: 80%;
+            /*margin: 1%;*/
+            width: auto;
+            text-align: left;
+            border-collapse: collapse;
+            }
+            th {
+                font-weight: normal;
+                padding: 1%;
+                background: #3075a5;
+                border-top: white solid 1px;
+                border-bottom: white solid 1px;
+                color: whitesmoke;
+                font-weight: bold;
+            }
+            td {
+                width: auto;
+                padding: 1%;
+                background: white;
+                border: #3075a5 solid 1px;
+                color: #669;
+            }
+            
+            .responsivediv {
+                overflow-x: auto;
+            }
+    
+            .centered {
+                display: flex;
+                justify-content: center;
+            }
+    
+            .button {
+                background-color: #3075a5;
+                color: white;
+                font-weight: bolder;
+                padding: 1%;
+                border: #3075a5 solid 5px;
+            }
+    
+            .head {
+                padding: 1%;
+                font-weight: bold;
+                font-size: 80%;
+                text-align: left;
+                background-color: #3075a5;
+                color: white;
+                position: inherit;
+            }
+
+            .footer {
+                padding: 1%;
+                font-weight: bold;
+                font-size: 80%;
+                text-align: center;
+                background-color: #3075a5;
+                color: white;
+                position: inherit;
+            }
+        </style>
+    <body class='centered'>
+        <div class=''
+            style='border: #3075a5 solid 4px; background-color: white; height: auto; width: 90%; margin: 4%; font-family: Arial;'>
+            <div class='head'>
+                <img src='https://softansol.com/media/logos/logoh.png' alt='' height='130' />
+            </div>
+            <div style=' margin: 1%; padding: 4%;'>
+                <div class=''>
+                    <h2 class='card-title text-center'>Estimado(a) ".$NAME."</h2>
+                    <br>
+                    <hr>
+                    <p style='font-size: 120%;'>".$RESPONSE."</p>
+                </div>
+                <br>
+            </div>
+            <div class='footer'>
+               <a href="https://softansol.com" target="_blank" style="color: white; text-decoration: none;"><p>Softan Soluciones</p></a>
+            </div>
+        </div>
+    </body>
+    
+    </html>

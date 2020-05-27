@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="./media/logos/blanco.png" alt="" class="animated imgNav"/>
+        </a>
+        <a href="javascript: menuPan()">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarText"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-ellipsis-h" style="color: white;"></i>
+            </button>
+        </a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+            <a class="panav nav-item nav-link" href="books.html">LIBROS</a>
+            <a class="panav nav-item nav-link" href="index.html">INICIO</a>
+            <a class="nav-item nav-link" href="#"> </a>
+            <a class="panav nav-item nav-link" href="http://blog.wilfridogonzalezescritor.com/">BLOG</a>
+        </div>
+    </nav>
+
+    <div class="" id="menupan" style="background-color: whitesmoke; width: 100%; height: 100%; position: fixed; z-index: 10; opacity: 1; left: 100%; box-shadow: 1px 1px 1px 1px gray; display:;">
+        <center>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a class="panavm nav-item nav-link" href="index.html" onclick="menuPan()">INICIO</a>
+            <a class="panavm nav-item nav-link" href="books.html" onclick="menuPan()">LIBROS</a>
+            <a class="panavm nav-item nav-link" href="#">   </a>
+            <a class="panavm nav-item nav-link" href="http://blog.wilfridogonzalezescritor.com" onclick="menuPan()">BLOG</a>
+        </center>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" id="modal_msg" tabindex="2" role="dialog"
+        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title" style="font-weight: bold;">Alerta</p>
+                </div>
+                <div class="modal-body" id="msg"></div>
+                <div class="modal-footer" id="btns"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

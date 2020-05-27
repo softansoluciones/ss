@@ -1,0 +1,61 @@
+<div class="" style="width: 100%; padding: 1%;">
+  <center>
+    <div class="" style="">
+      <br>
+      <a class="" href="index.html">
+        <img src=".././media/logos/logoh.jpg" alt="" class="" style=" height: 125px; width: auto;" />
+      </a>
+    </div>
+    <hr>
+    <h4 id="user_name">
+    </h4>
+    <hr>
+  </center>
+  <div style="overflow-y: auto; height: calc(100% - 300px);">
+    <a id="mod_1" class="anav nav-item nav-link" name="menup" data-usertype="2"
+      href="javascript: View_ContentForm()">CONTENIDOS</a>
+    <div id="subMod_1" name="sub_menu">
+      <a id="mod_1_1" class="anav nav-item nav-link ml-3 my-1 backText" name="menup" data-usertype="2"
+        href="javascript: View_Content()">Contenidos</a>
+      <a id="mod_1_2" class="anav nav-item nav-link ml-3 my-1" name="menup" data-usertype="2"
+        href="javascript: View_ContentForm()">Nuevo</a>
+    </div>
+    <a id="mod_3" class="anav nav-item nav-link" name="menup" data-usertype="2"
+      href="javascript: View_ContentType(1)">TIPO DE CONTENIDO</a>
+    <div id="subMod_3" name="sub_menu">
+    </div>
+    <a id="mod_2" class="anav nav-item nav-link" name="menup" data-usertype="2"
+      href="javascript: View_Users()">USUARIOS</a>
+    <div id="subMod_2" name="sub_menu">
+      <a id="mod_2_1" class="anav nav-item nav-link ml-3 my-1" name="menup" data-usertype="1"
+        href="javascript: View_Users()">Listado</a>
+      <a id="mod_2_2" class="anav nav-item nav-link ml-3 my-1" href="javascript: View_UsersForm()">Registrar</a>
+    </div>
+    <a class="anav nav-item nav-link" href="javascript: LogOut()">SALIR</a>
+  </div>
+</div>
+
+<!---------------------------Modal Mensaje----------------------------->
+<div class="modal fade bd-example-modal-lg" id="modal_msg" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title" style="font-weight: bold;">Alerta</p>
+      </div>
+      <div class="modal-body" id="msg">
+      </div>
+      <center>
+        <div class="modal-footer" id="btns">
+        </div>
+      </center>
+    </div>
+  </div>
+</div>
+
+<script>
+  user_data();
+  Load_ContentTypes();
+  ValidarMenu("menup", GlobalUserType);
+  get_module();
+</script>

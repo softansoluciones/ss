@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Usuarios</title>
+    <meta charset="UTF-8">
+    <script src="js/Users/usersreg.js" type="text/javascript"></script>
+    <script src="js/Users/usersBD.js" type="text/javascript"></script>
+</head>
+
+<body class=" container-fluid">
+    <script>
+        ValidarMenu("modalEditUserOption", GlobalUserType);
+    </script>
+    <center>
+        <h3>
+            <br>
+            Registro de Usuarios
+        </h3>
+        <hr>
+    </center>
+    <div class="" style="height: 84vh; overflow-x: auto;">
+        <div class="modal-body">
+            <center>
+                <div class="alert alert-danger backText" role="alert" id="modal_Alert">
+                </div>
+            </center>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control textbox" id="modalEdit_name" name="modalEditUsers"
+                        data-campo="Nombres de usuario" onchange="removec(this)" placeholder="Nombres de usuario">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control textbox" id="modalEdit_lastName" name="modalEditUsers"
+                        data-campo="Apellidos de usuario" onchange="removec(this)" placeholder="Apellidos de usuario">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control textbox" id="modalEdit_phone" name="modalEditUsers"
+                        data-campo="Teléfono" onchange="removec(this)" placeholder="Teléfono">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control textbox" id="modalEdit_email" name="modalEditUsers"
+                        data-campo="E-Mail" onchange="removec(this)" placeholder="E-Mail">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control textbox" id="modalEdit_password1" name="modalEditUsers"
+                        data-campo="Contraseña" onchange="removec(this)" placeholder="Contraseña">
+                </div>
+                <div class="form-group">
+                        <input type="password" class="form-control textbox" id="modalEdit_password2" name="modalEditUsers"
+                            data-campo="Repita contraseña" onchange="removec(this), validatePassword()" placeholder="Repita contraseña">
+                    </div>
+                <div class="form-group">
+                    <select class="form-control textbox" id="modalEdit_type" name="modalEditUsers" data-campo="Estado"
+                        onchange="removec(this)">
+                        <option value="" selected>Seleccione tipo de usuario</option>
+                        <option data-usertype="1" name="modalEditUserOption" value="1">SuperAdmin</option>
+                        <option data-usertype="2" name="modalEditUserOption" value="2">Administrador</option>
+                        <option data-usertype="2" name="modalEditUserOption" value="3">Regular</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control textbox" id="modalEdit_state" name="modalEditUsers" data-campo="Estado"
+                        onchange="removec(this)">
+                        <option value="" selected>Seleccione estado</option>
+                        <option value="2">Inactivo</option>
+                        <option value="1">Activo</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript: validateSave();" type="button" class="btn btn-ss-normal btn-sm"
+                id="SaveEdit">Guardar</a>
+            <a href="#" type="button" class="btn btn-ss-normal btn-sm disabled backText" id="SavingEdit"><span
+                    class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Guardando</a>
+        </div>
+    </div>
+</body>
+
+</html>

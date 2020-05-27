@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow p-3 mb-5">
+        <a class="navbar-brand" href="index.html">
+            <img src="../ss/media/logos/logohblanco.png" alt="Softab Soluciones" class="imgNav">
+        </a>
+        <a href="javascript: menuPan()">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarText"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-ellipsis-h" style="color: white;"></i>
+            </button>
+        </a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+            <a class="panav nav-item nav-link" href="#">INICIO</a>
+            <a class="panav nav-item nav-link" href="#services">SERVICIOS</a>
+            <a class="panav nav-item nav-link" href="#how_we_work">PLAN DE TRABAJO</a>
+            <a class="panav nav-item nav-link" href="#projects">PROYECTOS</a>
+            <a class="panav nav-item nav-link" href="#contact">CONTACTO</a>
+            <a class="nav-item nav-link" href="#"> </a>
+            <a class="panav nav-item nav-link" href="#">COTIZA AHORA</a>
+        </div>
+    </nav>
+
+    <div class="" id="menupan"
+        style="background-color: whitesmoke; width: 100%; min-height: 100vh; position: fixed; z-index: 99999; opacity: 1; left: 100%; box-shadow: 1px 1px 1px 1px gray;">
+        <br>
+        <a href="javascript: menuPan();" style="float: right; margin: 4%; color: #3075a5;">
+            <i class="fas fa-times fa-2x"></i>
+        </a>
+        <center>
+            <br>
+            <br>
+            <br>
+            <a class="panavm nav-item nav-link" href="#" onclick="menuPan()">
+                <h5>INICIO</h5>
+            </a>
+            <a class="panavm nav-item nav-link" href="#services" onclick="menuPan()">
+                <h5>SERVICIOS</h5>
+            </a>
+            <a class="panavm nav-item nav-link" href="#how_we_work" onclick="menuPan()">
+                <h5>PLAN DE TRABAJO</h5>
+            </a>
+            <a class="panavm nav-item nav-link" href="#projects" onclick="menuPan()">
+                <h5>PROYECTOS</h5>
+            </a>
+            <a class="panavm nav-item nav-link" href="#contact" onclick="menuPan()">
+                <h5>CONTACTO</h5>
+            </a>
+            <a class="panavm nav-item nav-link" href="#"> </a>
+            <a class="panavm nav-item nav-link" href="#" onclick="menuPan()">
+                <h5>COTIZA AHORA</h5>
+            </a>
+        </center>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" id="modal_msg" tabindex="2" role="dialog"
+        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title" style="font-weight: bold;">Alerta</p>
+                </div>
+                <div class="modal-body" id="msg"></div>
+                <div class="modal-footer" id="btns"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

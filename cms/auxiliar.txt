@@ -1,0 +1,99 @@
+<!---------------------------New Modal----------------------------->
+     <div class="modal" tabindex="-1" role="dialog" id="modalNew">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo Banner</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <center>
+                        <div class="alert alert-danger backText" role="alert" id="modal_Alert">
+                        </div>
+                    </center>
+                    <form>
+                        <div class="form-group" id="modalNew_image" style="width: 100%; height: auto;">
+
+                        </div>
+                        <div class="form-group backText">
+                            <label for="modalNew_id">Id</label>
+                            <input type="text" class="form-control" id="modalNew_id" name="modalNewContents"
+                                data-campo="Id de contenido" onchange="removec(this)" placeholder="Id de contenido">
+                        </div>
+                        <div class="form-group">
+                            <label for="modalNew_title">Titulo de contenido</label>
+                            <input type="text" class="form-control" id="modalNew_title" name="modalNewContents"
+                                data-campo="Titulo de contenido" onchange="removec(this)"
+                                placeholder="Titulo de contenido">
+                        </div>
+                        <div class="form-group backText">
+                            <label for="modalNew_text">Texto de contenido</label>
+                            <textarea class="form-control" id="modalNew_text" name="modalNewContents"
+                                data-campo="Texto de contenido" onchange="removec(this)"
+                                placeholder="Texto de contenido" rows="3"></textarea>
+                        </div>
+                        <div class="form-group backText">
+                            <label for="modalNew_aditionalinfo">Información adicional de contenido</label>
+                            <textarea class="form-control" id="modalNew_aditionalinfo" name="modalNewContents"
+                                data-campo="Información adicional de contenido" onchange="removec(this)"
+                                placeholder="Información adicional de contenido" rows="3"></textarea>
+                        </div>
+                        <div class="form-group backText">
+                            <label for="modalNew_extrainfo">Contenido extra</label>
+                            <input type="text" class="form-control" id="modalNew_extrainfo" name="modalNewContents"
+                                data-campo="Contenido extra" onchange="removec(this)" placeholder="Contenido extra">
+                        </div>
+                        <div class="form-group">
+                            <label for="modalNew_path">Imagen</label>
+                            <input type="file" class="form-control file-upload" id="modalNew_path"
+                                name="modalNewContentsNA" data-campo="Imagen" onchange="removec(this)"
+                                placeholder="Imagen">
+                            <input type="text" class="form-control backText" id="modalNew_spath"
+                                name="modalNewContents" data-campo="Imagen" onchange="removec(this)"
+                                placeholder="Imagen">
+                        </div>
+                        <div class="form-group">
+                            <label for="modalNew_hierarchy">Posición</label>
+                            <input type="number" class="form-control" id="modalNew_hierarchy" name="modalNewContents"
+                                data-campo="Posición" onchange="removec(this)" placeholder="Posición">
+                        </div>
+                        <div class="form-group backText">
+                            <select class="form-control" id="modalNew_type" name="modalNewContents"
+                                data-campo="Tipo de contenido" onchange="removec(this)">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="modalNew_section" name="modalNewContents"
+                                data-campo="Sección" onchange="removec(this)">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="modalNew_enviroment" name="modalNewContents"
+                                data-campo="Ambiente" onchange="removec(this)">
+                            </select>
+                        </div>
+                        <div class="form-group backText">
+                            <select class="form-control" id="modalNew_category" name="modalNewContents"
+                                data-campo="Categoría" onchange="removec(this)">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="modalNew_state" name="modalNewContents"
+                                data-campo="Estado" onchange="removec(this)">
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cerrar</a>
+                    <a href="javascript: validateSave();" type="button" class="btn btn_sm_normal btn-sm"
+                        id="SaveEdit">Guardar</a>
+                    <a href="#" type="button" class="btn btn_sm_normal btn-sm disabled backText" id="SavingEdit"><span
+                            class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Guardando</a>
+                </div>
+            </div>
+        </div>
+    </div>

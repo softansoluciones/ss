@@ -130,18 +130,33 @@ p{
 }
 
 .bg-w{
-  /*background-color: white;*/
+  background-color: white;
   background-size: 100%;
-  background-image: url('../../media/images/backwhite50.png');
+  /*background-image: url('../../media/images/backwhite50.png');*/
   background-attachment: fixed;
   min-height: 100vh;
 }
 
 .bg-b{
-  /*background-color: whitesmoke;*/
+  background-color: rgba(48, 117, 165, 0.8);
   background-size: 100%;
-  background-image: url('../../media/images/backblue50.png');
+  /*background-image: url('../../media/images/backwhite50.png');*/
+  min-height: 100vh;
+}
+
+.bg-w-i{
+  /*background-color: rgba(48, 117, 165, 0.8);*/
+  background-size: 100%;
+  background-image: url('../../media/images/backlineswhite1_50.jpg');
   background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.bg-b-i{
+  background-color: rgba(48, 117, 165, 0.8);
+  background-size: 100%;
+  /*background-image: url('../../media/images/backlinesblue1_70.jpg');*/
+  /*background-attachment: fixed;*/
   min-height: 100vh;
 }
 
@@ -152,8 +167,8 @@ p{
   color: #409ace;
   height:auto;
   width: 300px;
-  border: #3075a5 4px solid;
-  border-radius: 5%;
+  border: whitesmoke 4px solid;
+  border-radius: 0%;
   background-color: white;
   padding: 2%;
   font-weight: bold;
@@ -161,7 +176,7 @@ p{
 }
 
 .servicesRL:hover{
-  border: #409ace 4px solid;
+  border: whitesmoke 4px solid;
   transform: scale(1.1);
 }
 
@@ -170,8 +185,8 @@ p{
   color: #409ace;
   height:auto;
   width: 300px;
-  border: #3075a5 4px solid;
-  border-radius: 5%;
+  border: whitesmoke 4px solid;
+  border-radius: 0%;
   background-color: white;
   padding: 2%;
   font-weight: bold;
@@ -179,7 +194,7 @@ p{
 }
 
 .servicesC:hover{
-  border: #409ace 4px solid;
+  border: whitesmoke 4px solid;
   transform: scale(1.1);
 }
 
@@ -189,7 +204,7 @@ p{
   height:auto;
   width: 250px;
   border: #3075a5 4px solid;
-  border-radius: 5%;
+  border-radius: 0%;
   background-color: #3075a5; padding: 1%;
   font-weight: bold;
   transition: 0.2s;
@@ -198,7 +213,7 @@ p{
 
 .howework:hover{
   color:white;
-  border: #409ace 4px solid;
+  border: #3075a5 4px solid;
   transform: scale(1.1);
   text-decoration: none;
 }
@@ -209,7 +224,7 @@ p{
   height: 50px;
   width: 50px;
   border: #3075a5 1px solid;
-  border-radius: 5%;
+  border-radius: 0%;
   background-color: #3075a5;
   padding: 0%;
   transition: 0.2s;
@@ -219,7 +234,7 @@ p{
 
 .howeworkm:hover{
   color:white;
-  border: #409ace 4px solid;
+  border: #3075a5 4px solid;
   transform: scale(1.2);
   text-decoration: none;
 }
@@ -479,8 +494,8 @@ p{
     color: #409ace;
     height:auto;
     width: 96%;
-    border: #3075a5 4px solid;
-    border-radius: 5%;
+    border: whitesmoke 4px solid;
+    border-radius: 0%;
     background-color: white;
     padding: 4%;
     font-weight: bold;
@@ -488,7 +503,7 @@ p{
   }
   
   .servicesRL:hover{
-    border: #409ace 4px solid;
+    border: whitesmoke 4px solid;
     transform: scale(1.1);
   }
 
@@ -497,8 +512,8 @@ p{
     color: #409ace;
     height:auto;
     width: 96%;
-    border: #3075a5 4px solid;
-    border-radius: 5%;
+    border: whitesmoke 4px solid;
+    border-radius: 0%;
     background-color: white;
     padding: 4%;
     font-weight: bold;
@@ -506,7 +521,7 @@ p{
   }
   
   .servicesC:hover{
-    border: #409ace 4px solid;
+    border: whitesmoke 4px solid;
     transform: scale(1.1);
   }
   
@@ -514,20 +529,12 @@ p{
     display: none;
   }
 
-  .bg-w{
-    /*background-color: white;*/
-    background-size:cover;
-    background-image: url('../../media/images/backwhite50.png');
-    background-attachment: fixed;
-    min-height: 100vh;
+  .bg-w-i{
+    background-size: contain;
   }
   
-  .bg-b{
-    /*background-color: whitesmoke;*/
-    background-size:cover;
-    background-image: url('../../media/images/backblue50.png');
-    background-attachment: fixed;
-    min-height: 100vh;
+  .bg-b-i{
+    background-size: cover;
   }
 
 }

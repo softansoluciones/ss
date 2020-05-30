@@ -29,7 +29,7 @@ function Load_Contents() {
                     <td>' + datos.Response[i].state_name + '</td>\n\
                     <td>' + datos.Response[i].content_date + '</td>\n\
                     <td><center><a href="javascript: ShowModalEdit(' + datos.Response[i].content_id + ')" class="btn btn-ss-normal btn-sm">Editar</a></center></td>\n\
-                    <td><center><a href="javascript: ValidateDelete(' +"'"+ datos.Response[i].content_identifier +"'"+ ')" class="btn btn-danger btn-sm">Eliminar</a></center></td>\n\
+                    <td><center><a href="javascript: ValidateDelete(' + "'" + datos.Response[i].content_identifier + "'" + ')" class="btn btn-danger btn-sm">Eliminar</a></center></td>\n\
                   </tr>';
                     contid++;
                 }
@@ -110,19 +110,16 @@ function UpdateContent() {
     var contentCategory = document.getElementById('modalEdit_category').value;
     var contentPath = document.getElementById('modalEdit_path');
     var contentEInfo = document.getElementById('modalEdit_extrainfo');
-    if(contentPath.value.length == 0){
+
+    if (contentPath.value.length == 0) {
         var contentPathF = document.getElementById('modalEdit_spath').value;
-    }else{
+    } else {
         var contentPathF = contentPath.files[0];
     }
-    if(contentType == 3){
-        if(contentEInfo.value.length == 0){
-            var contentEInfoF = document.getElementById('modalEdit_sextrainfo').value;
-        }else{
-            var contentEInfoF = document.getElementById('modalEdit_extrainfo').files[0];
-        } 
-    }else{
-        var contentEInfoF = document.getElementById('modalEdit_extrainfo').value;
+    if (contentEInfo.value.length == 0) {
+        var contentEInfoF = document.getElementById('modalEdit_sextrainfo').value;
+    } else {
+        var contentEInfoF = document.getElementById('modalEdit_extrainfo').files[0];
     }
 
     var xhr = new XMLHttpRequest();
@@ -240,20 +237,17 @@ function SaveContent() {
     var contentCategory = document.getElementById('modalEdit_category').value;
     var contentPath = document.getElementById('modalEdit_path');
     var contentEInfo = document.getElementById('modalEdit_extrainfo');
-    if(contentPath.value.length == 0){
+    if (contentPath.value.length == 0) {
         var contentPathF = document.getElementById('modalEdit_spath').value;
-    }else{
+    } else {
         var contentPathF = contentPath.files[0];
     }
-    if(contentType == 3){
-        if(contentEInfo.value.length == 0){
-            var contentEInfoF = document.getElementById('modalEdit_sextrainfo').value;
-        }else{
-            var contentEInfoF = document.getElementById('modalEdit_extrainfo').files[0];
-        } 
-    }else{
-        var contentEInfoF = document.getElementById('modalEdit_extrainfo').value;
+    if (contentEInfo.value.length == 0) {
+        var contentEInfoF = document.getElementById('modalEdit_sextrainfo').value;
+    } else {
+        var contentEInfoF = document.getElementById('modalEdit_extrainfo').files[0];
     }
+
 
     var xhr = new XMLHttpRequest();
     var formData = new FormData();

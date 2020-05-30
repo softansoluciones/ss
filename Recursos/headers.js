@@ -11,7 +11,7 @@ document.write('<meta http-equiv="Cache-Control" content="no-cache, no-store, mu
 document.write('<meta http-equiv="Pragma" content="no-cache" />');
 document.write('<meta http-equiv="Expires" content="0" />');
 document.write('<meta http-equiv="Last-Modified" content="0" />');
-document.write('<link rel="icon" href="media/favicon.ico" type="logo" />');
+document.write('<link rel="icon" href="media/favicon/favicon.ico" type="logo" />');
 document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
 document.write('<script>if (typeof module === "object") {window.module = module; module = undefined;}</script>');
 document.write('<script src="Recursos/js/jquery-3.2.1.min.js" type="text/javascript"></script>');
@@ -30,3 +30,4 @@ document.write('<script src="Recursos/bootstrap-notify/bootstrap-notify.js" type
 document.write('<script src="Recursos/table2excel/dist/jquery.table2excel.min.js" type="text/javascript"></script>');
 document.write('<script src="Recursos/js/seguridad.js" type="text/javascript"></script>');
 document.write('<script src="Recursos/js/funciones.js" type="text/javascript"></script>');
+//document.write('<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-121413070-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-121413070-1");</script>')

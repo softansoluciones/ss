@@ -26,7 +26,7 @@ and open the template in the editor.
     </div>
   </div>
   <div class="">
-    <div id="services" class="bg-b">
+    <div id="services" class="bg-b-i">
       <br>
       <br>
       <div class="container">
@@ -92,7 +92,7 @@ and open the template in the editor.
       </div>
       <br>
     </div>
-    <div id="how_we_work" class="bg-w">
+    <div id="how_we_work" class="bg-w-i">
       <br>
       <br>
       <div class="container">
@@ -188,26 +188,31 @@ and open the template in the editor.
         </div>
         <br>
         <div class="d-flex justify-content-center" id="work_items">
-          <a id="how_we_work_meet" class="col howeworkm d-flex align-items-center justify-content-center shadow" href="javascript: how_WeWork(1);">
+          <a id="how_we_work_meet" class="col howeworkm d-flex align-items-center justify-content-center shadow"
+            href="javascript: how_WeWork(1);">
             <img src="media/images/meet.png" alt="" class="howeworkimageM">
           </a>
-          <a class="col howeworkm d-flex align-items-center justify-content-center shadow" id="how_we_work_proposal" href="javascript: how_WeWork(2);">
+          <a class="col howeworkm d-flex align-items-center justify-content-center shadow" id="how_we_work_proposal"
+            href="javascript: how_WeWork(2);">
             <img src="media/images/propuesta.png" alt="" class="howeworkimageM">
           </a>
-          <a class="col howeworkm d-flex align-items-center justify-content-center shadow" id="how_we_work_dev" href="javascript: how_WeWork(3);">
+          <a class="col howeworkm d-flex align-items-center justify-content-center shadow" id="how_we_work_dev"
+            href="javascript: how_WeWork(3);">
             <img src="media/images/dev.png" alt="" class="howeworkimageM">
           </a>
-          <a class="col howeworkm d-flex align-items-center justify-content-center shadow" id="how_we_work_test" href="javascript: how_WeWork(4);">
+          <a class="col howeworkm d-flex align-items-center justify-content-center shadow" id="how_we_work_test"
+            href="javascript: how_WeWork(4);">
             <img src="media/images/test.png" alt="" class="howeworkimageM">
           </a>
-          <a class="col howeworkm d-flex align-items-center justify-content-center shadow" id="how_we_work_implementation" href="javascript: how_WeWork(5);">
+          <a class="col howeworkm d-flex align-items-center justify-content-center shadow"
+            id="how_we_work_implementation" href="javascript: how_WeWork(5);">
             <img src="media/images/implementation.png" alt="" class="howeworkimageM">
           </a>
         </div>
       </div>
       <br>
     </div>
-    <div id="projects" class="bg-b">
+    <div id="projects" class="bg-b-i">
       <br>
       <br>
       <div class="container">
@@ -221,7 +226,7 @@ and open the template in the editor.
         <br>
       </div>
     </div>
-    <div id="contact" class="bg-w">
+    <div id="contact" class="bg-w-i">
       <br>
       <br>
       <div class="container">
@@ -233,18 +238,18 @@ and open the template in the editor.
         <form>
           <input type="text" name="page_contact" data-campo="Nombres" class="form-control textbox"
             id="page_contact_name" placeholder="Nombres" onchange="removec(this)" required>
-            <br>
-            <input type="text" name="page_contact" data-campo="Apellidos" class="form-control textbox"
+          <br>
+          <input type="text" name="page_contact" data-campo="Apellidos" class="form-control textbox"
             id="page_contact_lastName" placeholder="Apellidos" onchange="removec(this)" required>
-            <br>
-            <input type="email" name="page_contact" data-campo="E-Mail" class="form-control textbox"
+          <br>
+          <input type="email" name="page_contact" data-campo="E-Mail" class="form-control textbox"
             id="page_contact_email" placeholder="E-Mail" onchange="removec(this)" required>
-            <br>
-            <textarea name="page_contact" data-campo="Comentarios" class="form-control textbox" id="page_contact_comments"
+          <br>
+          <textarea name="page_contact" data-campo="Comentarios" class="form-control textbox" id="page_contact_comments"
             rows="3" placeholder="Comentarios" onchange="removec(this)" required></textarea>
           <br>
           <br>
-            <center>
+          <center>
             <a href="javascript: validateSaveContact()" id="page_contact_send" class="btn btn-ss-normal"
               style="width: 60%;">Enviar</a>
             <a href="#" id="page_contact_sending" class="btn  btn-ss-normal disabled backText" style="width: 60%;">
@@ -261,9 +266,10 @@ and open the template in the editor.
     <br>
     <br>
     <center>
-      <a href="#" target="_blank" class="footersocial"><i class="fab fa-instagram fa-2x"></i></a>
-      <a href="#" target="_blank" class="footersocial"><i class="fab fa-facebook-f fa-2x"></i></a>
-      <a href="#" target="_blank" class="footersocial"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.instagram.com/softansol" target="_blank" class="footersocial"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://www.facebook.com/softansoluciones/" target="_blank" class="footersocial"><i class="fab fa-facebook-f fa-2x"></i></a>
+      <a href="https://twitter.com/softansolucions" target="_blank" class="footersocial"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.linkedin.com/company/softan-soluciones" target="_blank" class="footersocial"><i class="fab fa-linkedin-in fa-2x"></i></a>
       <br>
       <br>
       <small>©Softan Soluciones</small><br>
@@ -272,6 +278,7 @@ and open the template in the editor.
     <br>
   </div>
   <script>
+    mobile();
     home();
   </script>
 </body>

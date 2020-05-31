@@ -7,9 +7,9 @@
 function verificacionI() {
     var login = sessionStorage.getItem("ses_estado");
 
-    if (login != "CheilCms") {
+    if (login != "SsCms") {
         sessionStorage.clear();
-        window.location = 'index.html';
+        window.location = 'index';
     } else {
         $("body").show();
     }
@@ -19,7 +19,7 @@ function verificacionL() {
     var login = sessionStorage.getItem("ses_estado");
 
     if (login == "CheilCms") {
-        window.location = 'inicio.html';
+        window.location = 'inicio';
     } else {
         sessionStorage.clear();
     }
@@ -27,7 +27,7 @@ function verificacionL() {
 
 function LogOut() {
     sessionStorage.clear();
-    window.location = 'index.html';
+    window.location = 'index';
 }
 
 //-----------------------------------Token-------------------------------------//
@@ -56,7 +56,7 @@ function Create_Token() {
                 sessionStorage.setItem('token', datos.Respuesta[0].token)
             } else {
                 if (response.Respuesta == 28) {
-                    window.location = '../admin/noauth.html';
+                    window.location = '../admin/noauth';
                 }
             }
         }
@@ -82,7 +82,7 @@ function Create_TokenUser(user) {
                 sessionStorage.setItem('token', datos.Respuesta[0].token)
             } else {
                 if (response.Respuesta == 28) {
-                    window.location = '../admin/noauth.html';
+                    window.location = '../admin/noauth';
                 }
             }
         }

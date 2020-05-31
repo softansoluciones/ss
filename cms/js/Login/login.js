@@ -69,7 +69,7 @@ function Create_TokenLogin(user_id, user_name, user_lstname, type_name, user_typ
         sesionUs(user_id, user_name, user_lstname, type_name, user_type);
       } else {
         if (response.Response == 228) {
-          window.location = 'noauth.html';
+          window.location = 'noauth';
         }
       }
     }
@@ -80,12 +80,12 @@ function Create_TokenLogin(user_id, user_name, user_lstname, type_name, user_typ
 }
 
 function sesionUs(user_id, user_name, user_lstname, type_name, user_type) {
-  sessionStorage.setItem("ses_estado", "CheilCms");
+  sessionStorage.setItem("ses_estado", "SsCms");
   sessionStorage.setItem("user_id", user_id);
   sessionStorage.setItem("user_name", user_name + " " + user_lstname);
   sessionStorage.setItem("type_name", type_name);
   sessionStorage.setItem("user_type", user_type);
-  window.location = 'administrador.html';
+  window.location = 'administrador';
 }
 
 function ReloadPage() {

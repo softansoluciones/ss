@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Softan Soluciones</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Recursos/headers.js" type="text/javascript"></script>
+    <script src="js/Requirements/requirementsBD.js" type="text/javascript"></script>
+    <script src="js/Requirements/requirements.js" type="text/javascript"></script>
+</head>
+
+<body class="">
+    <div id="navb_1" style="height: 100px">
+        <script>
+            $("#navb_1").load("Recursos/navbarRequirements.html");
+        </script>
+    </div>
+    <div class="bg-w-i-sm">
+        <div class="container" id="page_requirements_0">
+            <br>
+            <br>
+            <h1>GRACIAS POR QUERER TRABAJAR CON NOSOTROS</h1>
+            <br>
+            <p class="blackpshadowcol" style="font-size: 110%;">
+                A continuación podrás contarnos cual es la idea que quieres plasmar, para ello te solicitaremos
+                información
+                específica para nosotros poder empezar a analizar lo que tienes pensado realizar y así brindarte la
+                solución
+                más optima, nos comunicaremos contigo, puede ser vía e-mail o telefónicamente para poder entregarte una
+                propuesta o bien tener nuestro primer meet y discutir los puntos necesarios.
+            </p>
+            <br>
+            <div>
+                <a class="btn btn-ss-normal" style="float: right;" href="javascript: requirements(1)">Continuar</a>
+            </div>
+            <br>
+        </div>
+        <div class="container animated fadeIn backText" id="page_requirements_1">
+            <br>
+            <br>
+            <h1>TU INFORMACIÓN DE CONTACTO</h1>
+            <br>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control textbox"
+                            placeholder="Documento de identidad o NIT de tu empresa"
+                            id="page_requirements_customer_document" name="page_requirements_customer"
+                            data-campo="Documento de identidad o NIT de tu empresa" onchange="removec(this)" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control textbox"
+                            placeholder="Tu nombre, Nombre de representante legal o razón social"
+                            id="page_requirements_customer_name" name="page_requirements_customer"
+                            data-campo="Tu nombre, Nombre de representante legal o razón social"
+                            onchange="removec(this)" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="number" class="form-control textbox" placeholder="Número de teléfono"
+                            id="page_requirements_customer_phone" name="page_requirements_customer"
+                            data-campo="Número de teléfono" onchange="removec(this)" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control textbox" placeholder="E-Mail"
+                            id="page_requirements_customer_email" name="page_requirements_customer" data-campo="E-Mail"
+                            onchange="removec(this)" required>
+                    </div>
+                </div>
+                <br>
+                <small class="d-flex justify-content-center">
+                    <p class="psmall">
+                        Toda la información aquí registrada será para uso exclusivo de Softan Soluciones para fines
+                        comunicación, dicha información no se proveerá a otros medios ni será divulgada por ningún medio
+                        de
+                        comunicación
+                    </p>
+                </small>
+            </form>
+            <br>
+            <div>
+                <a id="page_requirements_customer_send" class="btn btn-ss-normal" style="float: right;"
+                    href="javascript: validateSaveCustomer()">Continuar</a>
+                <a id="page_requirements_customer_sending" class="btn btn-ss-normal disabled backText"
+                    style="float: right;" href="javascript: requirements(2)">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Procesando
+                </a>
+            </div>
+            <br>
+        </div>
+        <div class="container animated fadeIn backText" id="page_requirements_2">
+            <br>
+            <br>
+            <h1>¿QUE QUIERES HACER?</h1>
+            <br>
+            <form>
+                <div class="">
+                    <div class="form-group">
+                        <input type="text" class="form-control textbox"
+                            placeholder="Describe lo que quieres, por ejemplo: Aplicación móvil para vender productos, página web para mi empresa"
+                            id="page_requirements_requirement_name" name="page_requirements_requirement"
+                            data-campo="Describe lo que quieres, por ejemplo: Aplicación móvil para vender productos, página web para mi empresa"
+                            onchange="removec(this)" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <textarea class="form-control textbox" rows="6"
+                            placeholder="Escribe con detalle que quieres hacer con tu proyecto, por ejemplo: 'Quiero una página web para poder vender productos desde allí'"
+                            id="page_requirements_requirement_description" name="page_requirements_requirement"
+                            data-campo="Tu nombre, Nombre de representante legal o razón social"
+                            onchange="removec(this)" required></textarea>
+                    </div>
+                </div>
+            </form>
+            <br>
+            <div>
+                <a id="page_requirements_requirement_send" class="btn btn-ss-normal" style="float: right;"
+                    href="javascript: validateSaveRequirement()">Continuar</a>
+                <a id="page_requirements_requirement_sending" class="btn btn-ss-normal disabled backText"
+                    style="float: right;" href="#">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Procesando
+                </a>
+            </div>
+            <br>
+        </div>
+        <div class="container animated fadeIn backText" id="page_requirements_3">
+            <br>
+            <br>
+            <h1>DESCRIBE ALGUNAS DE LAS FUNCIONALIDADES QUE QUIERES</h1>
+            <br>
+            <p class="blackpshadowcol" style="font-size: 110%;">
+                Aquí queremos que nos expliques algunas de las funcionalidades que tendrá tu aplicación, esto es
+                importante
+                para nosotros poder hacernos una idea de las soluciones que podemos brindarte para que tu idea la saque
+                del
+                estadio.
+            </p>
+            <br>
+            <form>
+                <div class="" id="page_requirements_requirement_details">
+                    <div class="form-group form-row" id="div-detail-1">
+                        <input type="text" class="form-control textbox col"
+                            placeholder="Poder recibir mensajes de whatsapp, mostrar catálogo de productos, integrar pasarela de pagos, etc."
+                            id="page_requirements_requirement_detail_1" name="page_requirements_requirement_detail"
+                            data-campo="Detalle" onchange="removec(this)" required>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a class="btn btn-ss-normal" href="javascript: detailsAdd();"><i class="fas fa-plus"></i> Agregar
+                        nuevo</a>
+                </div>
+                <br>
+                <br>
+            </form>
+            <div>
+                <a id="page_requirements_details_send" class="btn btn-ss-normal" style="float: right;"
+                    href="javascript: validateSaveDetails()">Continuar</a>
+                <a id="page_requirements_details_sending" class="btn btn-ss-normal disabled backText"
+                    style="float: right;" href="#">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Procesando
+                </a>
+            </div>
+            <br>
+        </div>
+        <div class="container animated fadeIn backText" id="page_requirements_4">
+            <br>
+            <br>
+            <h1>TERMINAMOS</h1>
+            <br>
+            <p class="blackpshadowcol" style="font-size: 110%;">
+                Nuevamente muchas gracias por confiar en nosotros, en los próximos días nos estaremos comunicando
+                contigo para que sepas cuales son los pasos a seguir, esperamos poder ir de la mano contigo y trabajar
+                fuertemente para poder plasmar todas esas maravillosas ideas que están recorriendo tu cabeza.
+            </p>
+            <br>
+            <a class="btn btn-ss-normal" style="float: right;" href="index">Inicio</a>
+            <a class="btn btn-ss-normal" style="float: right;" href="requirements">Nuevo</a>
+        </div>
+    </div>
+    <div class="footer-ss">
+        <br>
+        <br>
+        <center>
+            <a href="https://www.instagram.com/softansol" target="_blank" class="footersocial"><i
+                    class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://www.facebook.com/softansoluciones/" target="_blank" class="footersocial"><i
+                    class="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://twitter.com/softansol" target="_blank" class="footersocial"><i
+                    class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.linkedin.com/company/softan-soluciones" target="_blank" class="footersocial"><i
+                    class="fab fa-linkedin-in fa-2x"></i></a>
+            <br>
+            <br>
+            <small>©Softan Soluciones</small><br>
+            <small>Copyright ©Softan Soluciones 2019 Valledupar-Colombia, Bogotá D.C.-Colombia</small>
+        </center>
+        <br>
+    </div>
+    <script>
+        validateStep();
+    </script>
+</body>
+
+</html>

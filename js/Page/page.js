@@ -18,6 +18,13 @@ function validateSaveContact() {
   if (validator == true) {
     SaveContact();
   } else {
+    $.notify(validator, {
+      animate: {
+        enter: 'animated fadeInRight',
+        exit: 'animated fadeOutRight',
+        position: 'absolute'
+      }
+    });
     document.getElementById('page_contact_send').classList.remove("backText");
     document.getElementById('page_contact_sending').classList.add("backText");
   }

@@ -116,10 +116,14 @@ function UpdateContent() {
     } else {
         var contentPathF = contentPath.files[0];
     }
-    if (contentEInfo.value.length == 0) {
-        var contentEInfoF = document.getElementById('modalEdit_sextrainfo').value;
-    } else {
-        var contentEInfoF = document.getElementById('modalEdit_extrainfo').files[0];
+    if(contentType == 3){
+        if(contentEInfo.value.length == 0){
+            var contentEInfoF = document.getElementById('modalEdit_sextrainfo').value;
+        }else{
+            var contentEInfoF = document.getElementById('modalEdit_extrainfo').files[0];
+        } 
+    }else{
+        var contentEInfoF = document.getElementById('modalEdit_extrainfo').value;
     }
 
     var xhr = new XMLHttpRequest();
@@ -242,11 +246,17 @@ function SaveContent() {
     } else {
         var contentPathF = contentPath.files[0];
     }
-    if (contentEInfo.value.length == 0) {
-        var contentEInfoF = document.getElementById('modalEdit_sextrainfo').value;
-    } else {
-        var contentEInfoF = document.getElementById('modalEdit_extrainfo').files[0];
+
+    if(contentType == 2){
+        if(contentEInfo.value.length == 0){
+            var contentEInfoF = document.getElementById('modalEdit_sextrainfo').value;
+        }else{
+            var contentEInfoF = document.getElementById('modalEdit_extrainfo').files[0];
+        } 
+    }else{
+        var contentEInfoF = document.getElementById('modalEdit_extrainfo').value;
     }
+
 
 
     var xhr = new XMLHttpRequest();

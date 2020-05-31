@@ -30,4 +30,4 @@ document.write('<script src="Recursos/bootstrap-notify/bootstrap-notify.js" type
 document.write('<script src="Recursos/table2excel/dist/jquery.table2excel.min.js" type="text/javascript"></script>');
 document.write('<script src="Recursos/js/seguridad.js" type="text/javascript"></script>');
 document.write('<script src="Recursos/js/funciones.js" type="text/javascript"></script>');
-//document.write('<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-121413070-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-121413070-1");</script>')
+document.write('<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-121413070-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-121413070-1");</script>')

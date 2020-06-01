@@ -1,4 +1,5 @@
 var Globalmodule = sessionStorage.getItem("modulo");
+var GlobalContentType = parseInt(sessionStorage.getItem("contetType"));
 var GlobalUserid = parseInt(sessionStorage.getItem("id_user"));
 var GlobalUserType = parseInt(sessionStorage.getItem("user_type"));
 var GlobalUserName = sessionStorage.getItem("user_name");
@@ -22,7 +23,7 @@ function get_module() {
             View_UsersForm();
             break;
         case "3":
-            View_ContentType(1);
+            View_ContentType(GlobalContentType);
             break;
         default:
             View_ContentForm();
@@ -56,6 +57,7 @@ function View_ContentType(type) {
         case 1:
             $("#L_contenido").load("banners.html");
             sessionStorage.setItem("modulo", 3);
+            sessionStorage.setItem("contetType", 1);
             removeActive();
             hideSubmenu();
             $('#mod_3').addClass('active_nav');
@@ -65,6 +67,7 @@ function View_ContentType(type) {
         case 2:
             $("#L_contenido").load("projects.html");
             sessionStorage.setItem("modulo", 3);
+            sessionStorage.setItem("contetType", 2);
             removeActive();
             hideSubmenu();
             $('#mod_3').addClass('active_nav');
@@ -74,6 +77,7 @@ function View_ContentType(type) {
         case 3:
             $("#L_contenido").load("contact.html");
             sessionStorage.setItem("modulo", 3);
+            sessionStorage.setItem("contetType", 3);
             removeActive();
             hideSubmenu();
             $('#mod_3').addClass('active_nav');
@@ -83,6 +87,7 @@ function View_ContentType(type) {
         default:
             $("#L_contenido").load("banners.html");
             sessionStorage.setItem("modulo", 3);
+            sessionStorage.setItem("contetType", 1);
             removeActive();
             hideSubmenu();
             $('#mod_3').addClass('active_nav');

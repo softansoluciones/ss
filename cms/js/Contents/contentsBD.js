@@ -116,7 +116,7 @@ function UpdateContent() {
     } else {
         var contentPathF = contentPath.files[0];
     }
-    if(contentType == 3){
+    if(contentType == 2){
         if(contentEInfo.value.length == 0){
             var contentEInfoF = document.getElementById('modalEdit_sextrainfo').value;
         }else{

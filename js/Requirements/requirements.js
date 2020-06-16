@@ -11,6 +11,10 @@ function validateSaveCustomer() {
         enter: 'animated fadeInRight',
         exit: 'animated fadeOutRight',
         position: 'absolute'
+      },
+      offset: {
+        x: 0,
+        y: 0
       }
     });
     document.getElementById('page_requirements_customer_send').classList.remove("backText");
@@ -36,6 +40,10 @@ function validateSaveRequirement() {
         enter: 'animated fadeInRight',
         exit: 'animated fadeOutRight',
         position: 'absolute'
+      },
+      offset: {
+        x: 0,
+        y: 0
       }
     });
     document.getElementById('page_requirements_requirement_send').classList.remove("backText");
@@ -57,6 +65,10 @@ function validateSaveDetails() {
         enter: 'animated fadeInRight',
         exit: 'animated fadeOutRight',
         position: 'absolute'
+      },
+      offset: {
+        x: 0,
+        y: 0
       }
     });
     document.getElementById('page_requirements_details_send').classList.remove("backText");

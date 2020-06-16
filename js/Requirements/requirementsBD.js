@@ -30,7 +30,7 @@ function SaveCustomer() {
                     var btns = document.getElementById('btns');
                     var msg = document.getElementById('msg');
                     btns.innerHTML = "<input data-dismiss='modal' aria-label='Close' class='btn btn-ss-normal' value='Aceptar'/>";
-                    msg.innerHTML = "<center><p>No hemos podido procesar tu informació, por favor vuelve a intentarlo.</p></center>";
+                    msg.innerHTML = "<center><p>No hemos podido procesar tu información, por favor vuelve a intentarlo.</p></center>";
                     $('#modal_msg').modal({
                         backdrop: 'static',
                         keyboard: true,
@@ -43,7 +43,7 @@ function SaveCustomer() {
                 var btns = document.getElementById('btns');
                 var msg = document.getElementById('msg');
                 btns.innerHTML = "<input data-dismiss='modal' aria-label='Close' class='btn btn-ss-normal' value='Aceptar'/>";
-                msg.innerHTML = "<center><p>No hemos podido procesar tu informació, por favor vuelve a intentarlo.</p></center>";
+                msg.innerHTML = "<center><p>No hemos podido procesar tu información, por favor vuelve a intentarlo.</p></center>";
                 $('#modal_msg').modal({
                     backdrop: 'static',
                     keyboard: true,
@@ -89,7 +89,7 @@ function SaveRequirement(details) {
                     var btns = document.getElementById('btns');
                     var msg = document.getElementById('msg');
                     btns.innerHTML = "<input data-dismiss='modal' aria-label='Close' class='btn btn-ss-normal' value='Aceptar'/>";
-                    msg.innerHTML = "<center><p>No hemos podido procesar tu informació, por favor vuelve a intentarlo.</p></center>";
+                    msg.innerHTML = "<center><p>No hemos podido procesar tu información, por favor vuelve a intentarlo.</p></center>";
                     $('#modal_msg').modal({
                         backdrop: 'static',
                         keyboard: true,
@@ -102,7 +102,7 @@ function SaveRequirement(details) {
                 var btns = document.getElementById('btns');
                 var msg = document.getElementById('msg');
                 btns.innerHTML = "<input data-dismiss='modal' aria-label='Close' class='btn btn-ss-normal' value='Aceptar'/>";
-                msg.innerHTML = "<center><p>No hemos podido procesar tu informació, por favor vuelve a intentarlo.</p></center>";
+                msg.innerHTML = "<center><p>No hemos podido procesar tu información, por favor vuelve a intentarlo.</p></center>";
                 $('#modal_msg').modal({
                     backdrop: 'static',
                     keyboard: true,

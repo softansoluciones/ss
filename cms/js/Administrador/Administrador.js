@@ -57,7 +57,7 @@ function View_ContentType(type) {
         case 1:
             $("#L_contenido").load("banners.html");
             sessionStorage.setItem("modulo", 3);
-            sessionStorage.setItem("contetType", 1);
+            sessionStorage.setItem("contetType", type);
             removeActive();
             hideSubmenu();
             $('#mod_3').addClass('active_nav');
@@ -67,7 +67,7 @@ function View_ContentType(type) {
         case 2:
             $("#L_contenido").load("projects.html");
             sessionStorage.setItem("modulo", 3);
-            sessionStorage.setItem("contetType", 2);
+            sessionStorage.setItem("contetType", type);
             removeActive();
             hideSubmenu();
             $('#mod_3').addClass('active_nav');
@@ -77,7 +77,7 @@ function View_ContentType(type) {
         case 3:
             $("#L_contenido").load("contact.html");
             sessionStorage.setItem("modulo", 3);
-            sessionStorage.setItem("contetType", 3);
+            sessionStorage.setItem("contetType", type);
             removeActive();
             hideSubmenu();
             $('#mod_3').addClass('active_nav');
@@ -122,7 +122,7 @@ function View_UsersForm() {
     $('#subMod_2').show('fast');
 }
 
-function ActualizarPagina() {
+function ReloadPage() {
     location.reload(true);
 }
 

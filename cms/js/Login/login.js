@@ -36,17 +36,18 @@ function login() {
       if (datos.Response != 0 && datos.Response[0].RESPONSEID != 0) {
         Create_TokenLogin(datos.Response[0].user_id, datos.Response[0].user_name, datos.Response[0].user_lstname, datos.Response[0].type_name, datos.Response[0].user_type)
       } else {
+        debugger
         var btns = document.getElementById('btns');
         var msg = document.getElementById('msg');
-        btns.innerHTML = "<input data-dismiss='modal' aria-label='Close' class='btn btn_wil_normal' value='Aceptar'/>";
+        btns.innerHTML = "<input data-dismiss='modal' aria-label='Close' class='btn btn-ss-normal' value='Aceptar'/>";
         msg.innerHTML = "<center><p>" + datos.Response[0].RESPONSETXT + "</center>";
         $('#modal_msg').modal({
           backdrop: 'static',
           keyboard: true,
           show: true
         });
-        document.getElementById('btn_in').classList.add("backText");
-        document.getElementById('btn_inLoading').classList.remove("backText");
+        document.getElementById('btn_in').classList.remove("backText");
+        document.getElementById('btn_inLoading').classList.add("backText");
       }
     }
   });

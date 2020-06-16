@@ -203,3 +203,31 @@ function menuPan() {
     }
 
 }
+
+function contactPan() {
+
+    var pos = $("#contactPan").data("pos");
+    var panpos = $(window).width();
+    if (pos == "in") {
+        $("#contactPan").animate({ left: '82%' });
+        $("body").addClass('overbody');
+        $("#contactPan").data("pos", "out");
+    }else{
+        $("#contactPan").animate({ left: '100%' });
+        $("body").removeClass('overbody');
+        $("#contactPan").data("pos", "in");
+    }
+
+}
+
+function contactPanHide() {
+
+    var pos = $("#contactPan").data("pos");
+    var panpos = $(window).width();
+    if (pos == "out") {
+        $("#contactPan").animate({ left: '100%' });
+        $("body").removeClass('overbody');
+        $("#contactPan").data("pos", "in");
+    }
+
+}

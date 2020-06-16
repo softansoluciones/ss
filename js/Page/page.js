@@ -23,6 +23,10 @@ function validateSaveContact() {
         enter: 'animated fadeInRight',
         exit: 'animated fadeOutRight',
         position: 'absolute'
+      },
+      offset: {
+        x: 0,
+        y: 0
       }
     });
     document.getElementById('page_contact_send').classList.remove("backText");

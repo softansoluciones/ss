@@ -6,29 +6,34 @@ function Load_Contact() {
 
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
-            var datos = JSON.parse(this.responseText)
-            //console.log(this.responseText);
-            if (datos.Response != 0) {
-                if (datos.Response == 228) {
-                    window.location = "noauth.html";
-                }
-                var html = document.getElementById('tabB_Registros');
-                html.innerHTML = '';
-                var contid = 1;
-                for (var i = 0; i < datos.Response.length; i++) {
-                    html.innerHTML += '<tr>\n\
+            if (xhr.status == 200) {
+                var datos = JSON.parse(this.responseText)
+                if (datos.Response != 0) {
+                    if (datos.Response == 228) {
+                        window.location = "noauth.html";
+                    }
+                    var html = document.getElementById('tabB_Registros');
+                    html.innerHTML = '';
+                    var contid = 1;
+                    for (var i = 0; i < datos.Response.length; i++) {
+                        html.innerHTML += '<tr>\n\
                     <th scope="row">' + contid + '</th>\n\
                     <td>' + datos.Response[i].contact_name + ' ' + datos.Response[i].contact_lastname + '</td>\n\
                     <td>' + datos.Response[i].contact_email + '</td>\n\
                     <td>' + datos.Response[i].state_name + '</td>\n\
                     <td><center><a href="javascript: ShowModalEdit(' + datos.Response[i].contact_id + ')" class="btn btn-ss-normal btn-sm">Editar</a></center></td>\n\
                   </tr>';
-                    contid++;
+                        contid++;
+                    }
+                } else {
+                    var html = document.getElementById('tabB_Registros');
+                    html.innerHTML = '';
+                    html.innerHTML = '<center>No existe información</center>';
                 }
             } else {
                 var html = document.getElementById('tabB_Registros');
                 html.innerHTML = '';
-                html.innerHTML = '<center>No existe información</center>';
+                html.innerHTML = '<center>Error al cargar la información</center>';
             }
         }
     });
@@ -46,31 +51,46 @@ function ShowModalEdit(id) {
 
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
-            var datos = JSON.parse(this.responseText)
-            if (datos.Response != 0) {
-                if (datos.Response == 228) {
-                    window.location = "noauth.html";
+            if (xhr.status == 200) {
+                var datos = JSON.parse(this.responseText)
+                if (datos.Response != 0) {
+                    if (datos.Response == 228) {
+                        window.location = "noauth.html";
+                    }
+                    document.getElementById('modalEdit_id').value = datos.Response[0].contact_id;
+                    document.getElementById('modalEdit_name').value = datos.Response[0].contact_name;
+                    document.getElementById('modalEdit_lastName').value = datos.Response[0].contact_lastname;
+                    document.getElementById('modalEdit_email').value = datos.Response[0].contact_email;
+                    document.getElementById('modalEdit_phone').value = datos.Response[0].contact_phone;
+                    document.getElementById('modalEdit_state').value = datos.Response[0].state_name;
+                    document.getElementById('modalEdit_message').value = datos.Response[0].contact_comments;
+                    document.getElementById('modalEdit_response').value = datos.Response[0].contact_response;
+
+                    if (datos.Response[0].state_id == 3) {
+                        UpdatecontactOpen(id)
+                    }
+                    $('#modalEdit').modal({
+                        backdrop: 'static',
+                        keyboard: true,
+                        show: true
+                    });
+                } else {
+                    var btns = document.getElementById('btns');
+                    var msg = document.getElementById('msg');
+                    btns.innerHTML = "<input data-dismiss='modal' aria-label='Close' class='btn btn-ss-normal' value='Aceptar'/>";
+                    msg.innerHTML = "<center><p>No existe información</center>";
+                    $('#modal_msg').modal({
+                        backdrop: 'static',
+                        keyboard: true,
+                        show: true
+                    });
                 }
-                document.getElementById('modalEdit_id').value = datos.Response[0].contact_id;
-                document.getElementById('modalEdit_name').value = datos.Response[0].contact_name;
-                document.getElementById('modalEdit_lastName').value = datos.Response[0].contact_lastname;
-                document.getElementById('modalEdit_email').value = datos.Response[0].contact_email;
-                document.getElementById('modalEdit_state').value = datos.Response[0].state_name;
-                document.getElementById('modalEdit_message').value = datos.Response[0].contact_comments;
-                
-                if(datos.Response[0].state_id == 3){
-                    UpdatecontactOpen(id)
-                }
-                $('#modalEdit').modal({
-                    backdrop: 'static',
-                    keyboard: true,
-                    show: true
-                });
             } else {
+                $('#modalEdit').hide();
                 var btns = document.getElementById('btns');
                 var msg = document.getElementById('msg');
                 btns.innerHTML = "<input data-dismiss='modal' aria-label='Close' class='btn btn-ss-normal' value='Aceptar'/>";
-                msg.innerHTML = "<center><p>No existe información</center>";
+                msg.innerHTML = "<center><p>Error al cargar la información</center>";
                 $('#modal_msg').modal({
                     backdrop: 'static',
                     keyboard: true,
@@ -92,12 +112,13 @@ function Updatecontact() {
     var contactName = document.getElementById('modalEdit_name').value;
     var contactLastName = document.getElementById('modalEdit_lastName').value;
     var contactEmail = document.getElementById('modalEdit_email').value;
+    var contactPhone = document.getElementById('modalEdit_phone').value;
     var contactResponse = document.getElementById('modalEdit_response').value;
     var ContactState = 6;
     var check = document.getElementById('modalEdit_check');
     if (check.checked == true) {
         ContactState = 5
-      } 
+    }
 
     var xhr = new XMLHttpRequest();
     var formData = new FormData();
@@ -106,27 +127,43 @@ function Updatecontact() {
     formData.append("contact_name", contactName);
     formData.append("contact_lastname", contactLastName);
     formData.append("contact_email", contactEmail);
+    formData.append("contact_phone", contactPhone);
     formData.append("contact_response", contactResponse.replace(/\r?\n/g, "<br>"));
     formData.append("contact_state", ContactState);
 
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
-            var datos = JSON.parse(this.responseText)
-            //console.log(this.responseText);
-            if (datos.Response != 0) {
-                if (datos.Response == 228) {
-                    window.location = "noauth.html";
+            if (xhr.status == 200) {
+                var datos = JSON.parse(this.responseText)
+                //console.log(this.responseText);
+                if (datos.Response != 0) {
+                    if (datos.Response == 228) {
+                        window.location = "noauth.html";
+                    }
+                    $('#modalEdit').hide();
+                    var btns = document.getElementById('btns');
+                    var msg = document.getElementById('msg');
+                    btns.innerHTML = "<a href='javascript: ReloadPage();' class='btn btn-ss-normal'>Aceptar</a>";
+                    msg.innerHTML = "<center><p>Información actualizada con éxito</p></center>";
+                    $('#modal_msg').modal({
+                        backdrop: 'static',
+                        keyboard: true,
+                        show: true
+                    });
+                } else {
+                    $('#modalEdit').hide();
+                    document.getElementById('SaveEdit').classList.remove("backText");
+                    document.getElementById('SavingEdit').classList.add("backText");
+                    var btns = document.getElementById('btns');
+                    var msg = document.getElementById('msg');
+                    btns.innerHTML = "<input data-dismiss='modal' aria-label='Close' class='btn btn-ss-normal' value='Aceptar'/>";
+                    msg.innerHTML = "<center><p>Error al actualizar información.</p></center>";
+                    $('#modal_msg').modal({
+                        backdrop: 'static',
+                        keyboard: true,
+                        show: true
+                    });
                 }
-                $('#modalEdit').hide();
-                var btns = document.getElementById('btns');
-                var msg = document.getElementById('msg');
-                btns.innerHTML = "<a href='javascript: ReloadPage();' class='btn btn-ss-normal'>Aceptar</a>";
-                msg.innerHTML = "<center><p>Información actualizada con éxito</p></center>";
-                $('#modal_msg').modal({
-                    backdrop: 'static',
-                    keyboard: true,
-                    show: true
-                });
             } else {
                 $('#modalEdit').hide();
                 document.getElementById('SaveEdit').classList.remove("backText");
@@ -161,11 +198,25 @@ function UpdatecontactOpen(id) {
 
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
-            var datos = JSON.parse(this.responseText)
-            //console.log(this.responseText);
-            if (datos.Response != 0) {
-                if (datos.Response == 228) {
-                    window.location = "noauth.html";
+            if (xhr.status == 200) {
+                var datos = JSON.parse(this.responseText)
+                if (datos.Response != 0) {
+                    if (datos.Response == 228) {
+                        window.location = "noauth.html";
+                    }
+                } else {
+                    $('#modalEdit').hide();
+                    document.getElementById('SaveEdit').classList.remove("backText");
+                    document.getElementById('SavingEdit').classList.add("backText");
+                    var btns = document.getElementById('btns');
+                    var msg = document.getElementById('msg');
+                    btns.innerHTML = "<input data-dismiss='modal' aria-label='Close' class='btn btn-ss-normal' value='Aceptar'/>";
+                    msg.innerHTML = "<center><p>Error al cargar información.</p></center>";
+                    $('#modal_msg').modal({
+                        backdrop: 'static',
+                        keyboard: true,
+                        show: true
+                    });
                 }
             } else {
                 $('#modalEdit').hide();

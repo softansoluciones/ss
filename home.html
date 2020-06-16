@@ -21,7 +21,7 @@ and open the template in the editor.
       $("#navb_1").load("Recursos/navbar.html");
     </script>
   </div>
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" style="max-height: 84vh;">
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="max-height: 84vh;">
     <div class="carousel-inner" id="carouselDivPage">
     </div>
   </div>
@@ -270,16 +270,7 @@ and open the template in the editor.
         <h1 class="whitehshadow">NUESTROS PROYECTOS</h1>
         <br>
         <div class="card-columns" id="projects_deck">
-          <div class="card">
-            <img src="media/projects/shakeit.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Shake It Milkshakes & Smoothie Bar</h5>
-              <p class="card-text">27 De Junio de 2016</p>
-            </div>
-            <div class="card-footer">
-              <a href="#">VER</a>
-            </div>
-          </div>
+         
         </div>
       </div>
     </div>
@@ -305,9 +296,13 @@ and open the template in the editor.
             </div>
           </div>
           <div class="form-row">
-            <div class="col-12 mb-3">
+            <div class="col-6 mb-3">
               <input type="email" name="page_contact" data-campo="E-Mail" class="form-control textbox"
                 id="page_contact_email" placeholder="E-Mail" onchange="removec(this)" required>
+            </div>
+            <div class="col-6 mb-3">
+              <input type="number" name="page_contact" data-campo="Teléfono" class="form-control textbox"
+                id="page_contact_phone" placeholder="Teléfono" onchange="removec(this)" required>
             </div>
           </div>
           <div class="form-row">
@@ -326,29 +321,48 @@ and open the template in the editor.
             </a>
           </center>
         </form>
+        <div data-pos="in" id="contactPan" class="shadow-lg cotactDiv">
+          <div style="padding: 1%;" class="">
+            <center>
+              <a href="javascript: contactPan()" onblur="contactPanHide()" style="text-decoration: none;">
+                <h6>DATOS DE CONTACTO</h6>
+              </a>
+              <hr>
+            </center>
+          </div>
+          <br>
+          <br>
+          <div style="padding: 1%; -ms-transform: rotate(90deg); /* IE 9 */ transform: rotate(90deg);">
+            <p style="font-size: 100%;">
+              Bogotá-Colombia<br>
+              3157825995<br>
+              contacto@softansol.com<br>
+            </p>
+          </div>
+        </div>
       </div>
       <br>
     </div>
   </div>
-  <div class="footer-ss">
+  <footer class="footer-ss">
     <br>
     <br>
     <center>
-      <a href="https://www.instagram.com/softansol" target="_blank" class="footersocial"><i
-          class="fab fa-instagram fa-2x"></i></a>
-      <a href="https://www.facebook.com/softansoluciones/" target="_blank" class="footersocial"><i
-          class="fab fa-facebook-f fa-2x"></i></a>
-      <a href="https://twitter.com/softansol" target="_blank" class="footersocial"><i
-          class="fab fa-twitter fa-2x"></i></a>
-      <a href="https://www.linkedin.com/company/softan-soluciones" target="_blank" class="footersocial"><i
-          class="fab fa-linkedin-in fa-2x"></i></a>
-      <br>
-      <br>
-      <small>©Softan Soluciones</small><br>
-      <small>Copyright ©Softan Soluciones 2019 Valledupar-Colombia, Bogotá D.C.-Colombia</small>
+        <a href="https://www.instagram.com/softansol" target="_blank" class="footersocial"><i
+                class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://www.facebook.com/softansoluciones/" target="_blank" class="footersocial"><i
+                class="fab fa-facebook-f fa-2x"></i></a>
+        <a href="https://twitter.com/softansol" target="_blank" class="footersocial"><i
+                class="fab fa-twitter fa-2x"></i></a>
+        <a href="https://www.linkedin.com/company/softan-soluciones" target="_blank" class="footersocial"><i
+                class="fab fa-linkedin-in fa-2x"></i></a>
+        <br>
+        <br>
+        <small>©Softan Soluciones</small><br>
+        <small>Copyright ©Softan Soluciones 2020 Valledupar-Colombia, Bogotá D.C.-Colombia</small>
     </center>
     <br>
-  </div>
+</footer>
   <script>
     pc();
     home();

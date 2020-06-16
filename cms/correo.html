@@ -1,90 +1,145 @@
 <html>
-            <head>
-            <meta charset='UTF-8'>
-            <meta name='viewport' content='width=device-width, initial-scale=1'>
-            <style>
-            table {
-            font-family: Arial;
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        @font-face {
+            font-family: girolight;
+            src: url("https://softansol.com/Recursos/css/Fonts/girolight-font.otf");
+        }
+
+        @font-face {
+            font-family: helveticaBlk;
+            src: url("https://softansol.com/Recursos/css/Fonts/HelveticaLTStd-BlkCond.otf");
+        }
+
+        @font-face {
+            font-family: helveticaBold;
+            src: url("https://softansol.com/Recursos/css/Fonts/HelveticaLTStd-BoldCond.otf");
+        }
+
+        @font-face {
+            font-family: helveticaLight;
+            src: url("https://softansol.com/Recursos/css/Fonts/HelveticaLTStd-LightCond.otf");
+        }
+
+        @font-face {
+            font-family: robotoRegular;
+            src: url("https://softansol.com/Recursos/css/Fonts/Roboto-Regular.ttf");
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: helveticaBold;
+            color: #3075a5;
+        }
+
+        h4,
+        h5,
+        h6 {
+            font-family: helveticaBold;
+            color: #3075a5;
+        }
+
+        p {
+            font-family: robotoRegular;
+        }
+
+        table {
             font-size: 80%;
             /*margin: 1%;*/
             width: auto;
             text-align: left;
             border-collapse: collapse;
-            }
-            th {
-                font-weight: normal;
-                padding: 1%;
-                background: #3075a5;
-                border-top: white solid 1px;
-                border-bottom: white solid 1px;
-                color: whitesmoke;
-                font-weight: bold;
-            }
-            td {
-                width: auto;
-                padding: 1%;
-                background: white;
-                border: #3075a5 solid 1px;
-                color: #669;
-            }
-            
-            .responsivediv {
-                overflow-x: auto;
-            }
-    
-            .centered {
-                display: flex;
-                justify-content: center;
-            }
-    
-            .button {
-                background-color: #3075a5;
-                color: white;
-                font-weight: bolder;
-                padding: 1%;
-                border: #3075a5 solid 5px;
-            }
-    
-            .head {
-                padding: 1%;
-                font-weight: bold;
-                font-size: 80%;
-                text-align: left;
-                background-color: #3075a5;
-                color: white;
-                position: inherit;
-            }
+        }
 
-            .footer {
-                padding: 1%;
-                font-weight: bold;
-                font-size: 80%;
-                text-align: center;
-                background-color: #3075a5;
-                color: white;
-                position: inherit;
-            }
-        </style>
-    <body class='centered'>
-        <div class=''
-            style='border: #3075a5 solid 4px; background-color: white; height: auto; width: 90%; margin: 4%; font-family: Arial;'>
-            <div class='head'>
-                <img src='https://softansol.com/media/logos/logohblanco.png' alt='' height='130' />
-            </div>
-            <div style=' margin: 1%; padding: 4%;'>
-                <div class=''>
-                    <h2 class='card-title text-center'>Estimado(a) ".$NAME."</h2>
-                    <br>
-                    <hr>
-                    <p style='font-size: 120%;'>".$RESPONSE."</p>
-                </div>
+        th {
+            padding: 1%;
+            background: #3075a5;
+            border-top: white solid 1px;
+            border-bottom: white solid 1px;
+            color: whitesmoke;
+            font-weight: bold;
+        }
+
+        td {
+            width: auto;
+            padding: 1%;
+            background: white;
+            border: #3075a5 solid 1px;
+            color: #669;
+        }
+
+        .responsivediv {
+            overflow-x: auto;
+        }
+
+        .centered {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button {
+            background-color: #3075a5;
+            color: white;
+            font-weight: bolder;
+            padding: 1%;
+            border: #3075a5 solid 5px;
+        }
+
+        .header {
+            padding: 1%;
+            font-weight: bold;
+            font-size: 80%;
+            text-align: left;
+            background-color: #3075a5;
+            color: white;
+            position: inherit;
+        }
+
+        .footer {
+            padding: 1%;
+            font-weight: bold;
+            font-size: 80%;
+            text-align: center;
+            background-color: #3075a5;
+            color: white;
+            position: inherit;
+        }
+    </style>
+
+<body class='centered'>
+    <div class=''
+        style='border: #3075a5 solid 4px; background-color: white; height: auto; width: 90%; margin: 4%; font-family: Arial;'>
+        <div class='header'>
+            <img src='https://softansol.com/media/logos/softan-soluciones.logohblanco.png' alt='' height='130' />
+        </div>
+        <div style=' margin: 1%; padding: 4%;'>
+            <div class=''>
+                <h2 class='card-title text-center'>Hola ".$NAME."</h2>
                 <br>
+                <hr>
+                <p style='font-size: 120%;'>".$RESPONSE."</p>
             </div>
             <br>
-            <div class='footer'>
-               <a href="https://softansol.com" target="_blank" style="color: white; text-decoration: none;"><p>Softan Soluciones</p></a>
-            </div>
         </div>
-    </body>
-    
-    </html>
+        <br>
+        <div class='footer'>
+            <p>CONTACTO
+                <br>
+                contacto@softansol.com
+                <br>
+                3157825995
+                <br>
+                <a href="https://softansol.com" target="_blank" style="color: white; text-decoration: none;">SOFTAN
+                    SOLUCONES</a>
+                <br>
+                Bogotá Colombia
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
